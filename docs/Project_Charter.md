@@ -1,7 +1,7 @@
 # Project Charter: Claims Integrity & Provider Network Optimization
 
-**Date:** March 15, 2026  
-**Project Lead:** [Your Full Name]  
+**Date:** January 15, 2026  
+**Project Lead:** Priyanka saki gajendran
 **Stakeholder:** Director, Provider Network Operations
 
 ---
