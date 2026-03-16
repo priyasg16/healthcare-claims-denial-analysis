@@ -1,34 +1,34 @@
-# Project Charter: Claims Integrity & Provider Network Optimization
+# Healthcare Claims Integrity & Provider Performance Analysis
 
 **Date:** January 15, 2026  
 **Project Lead:** Priyanka saki gajendran
 **Stakeholder:** Director, Provider Network Operations
 
----
+## 🏥 Project Overview
+This repository contains an end-to-end data engineering and BI solution designed to analyze **3.15 GB of CMS Medicare Physician & Other Practitioners data**. The project identifies financial leakage by evaluating the variance between provider billing and actual Medicare payments.
 
-## 1. Business Objective
-To identify operational inefficiencies in provider billing practices that contribute to high claim denial rates. This project aims to pinpoint "leakage" in the claims adjudication process, enabling the Provider Relations team to deploy targeted provider education and reduce administrative rework.
+## 🛠️ Tech Stack
+- **ETL:** Alteryx (Advanced Workflow Design & Automation)
+- **Database:** SQL Server (Star Schema, Physical Modeling)
+- **Programming:** Python (Outlier Detection)
+- **Visualization:** Power BI (DAX, Interactive Dashboards)
+- **Methodology:** Agile (Task-based documentation)
 
-## 2. Key Business Questions
-* **What is the denial rate** across different provider specialties?
-* **Which denial reason codes** are the primary drivers of administrative cost?
-* **Are there specific geographic clusters** or high-volume providers that disproportionately contribute to claim denials?
+## 📐 Architecture & Data Flow
+The pipeline follows a professional **Star Schema** architecture to ensure data integrity and query performance:
+1. **Ingestion:** Loading 3.1 GB raw CMS CSV via Alteryx.
+2. **Cleaning:** Renaming technical CMS variables to Business Semantic names.
+3. **Modeling:** Loading data into a SQL Server Star Schema.
+4. **Visualization:** Power BI dashboard for Executive Network Operations.
 
-## 3. Success Metrics (KPIs)
-* **Primary Metric:** Percentage of "clean claims" (claims submitted without errors) across top-tier provider specialties.
-* **Secondary Metric:** Reduction in the average time-to-resolution for denied claims.
+## 🚀 Scaling to the Cloud (Preferred Skills)
+To align with enterprise requirements, this local architecture is designed to scale:
+- **Storage:** Transition to **Azure Data Lake Gen2** or **AWS S3**.
+- **Computing:** Use **Azure Data Factory** or **Alteryx Server** for automation.
+- **Warehouse:** Migration to **Snowflake** or **Azure Synapse**.
 
-## 4. Scope & Methodology
-* **In-Scope:** Ingestion of CMS Medicare Provider Utilization data; data cleaning and validation; analysis of specialty-specific denial patterns; development of an interactive performance dashboard.
-* **Out-of-Scope:** Longitudinal patient clinical outcomes; non-Medicare commercial insurance data.
-
-## 5. Technology Stack
-* **Ingestion:** SQL Server Integration Services (SSIS)
-* **Data Cleaning:** Python (Pandas)
-* **Modeling:** SQL Server (Star Schema)
-* **Transformation:** Alteryx (for data blending and logic)
-* **Visualization:** Power BI
-
-## 6. Data Integrity & Ethics
-* **Compliance:** This project utilizes publicly available, de-identified datasets from the Centers for Medicare & Medicaid Services (CMS). No Protected Health Information (PHI) is included.
-* **Assumptions:** We assume `Denial_Reason_Code` is consistently populated. All outlier billing amounts (e.g., >$100,000) have been flagged for manual verification.
+## 📂 Repository Structure
+- `/docs`: Project Charter and Data Dictionary.
+- `/sql`: DDL scripts for Star Schema creation.
+- `/alteryx`: .yxmd workflow files.
+- `/power-bi`: .pbix dashboard templates.
