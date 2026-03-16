@@ -1,7 +1,8 @@
 # Healthcare Claims Integrity & Provider Performance Analysis
 
-## 🏥 Project Overview
-This repository contains an end-to-end data engineering and BI solution designed to analyze **3.15 GB of CMS Medicare Physician & Other Practitioners data**. The project identifies financial leakage by evaluating the variance between provider billing and actual Medicare payments.
+## 🚀 Executive Summary
+The **Healthcare Claims Integrity & Provider Performance Analysis** initiative was launched to mitigate financial leakage within the CMS Medicare provider network. By leveraging a high-volume dataset (3.15 GB), this project engineered a scalable ETL pipeline to automate the identification of billing variances between "Submitted Charges" and "Actual Medicare Reimbursements." 
+This solution establishes a "Single Source of Truth," enabling data-driven decision-making for network leadership by benchmarking provider performance against national specialty and geographic standards.
 
 ## 🏗️ Architecture & Data Flow
 The pipeline follows a professional **Star Schema** architecture:
@@ -27,3 +28,9 @@ The pipeline follows a professional **Star Schema** architecture:
 * **SQL Server 2022:** (For database hosting).
 * **Power BI Desktop:** (For rendering final dashboard).
 * **AWS S3 Access:** (Configured as the primary data lake landing zone).
+
+  ## 📂 Repository Structure
+- `/docs`: Project Charter and Data Dictionary.
+- `/sql`: DDL scripts for Star Schema creation.
+- `/alteryx`: .yxmd workflow files.
+- `/power-bi`: .pbix dashboard templates.
